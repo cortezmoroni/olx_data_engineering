@@ -16,6 +16,7 @@ flowchart LR
 
 #Bronze
 -Ingestão dos dados da OLX.
+-Armazenamento  inicial em tabela Delta
 
 #Silver
 -limpeza
@@ -28,6 +29,7 @@ flowchart LR
 -categoria de preço
 -total de cômodos
 -Indicador de garagem
+-Data processamento
 
 #Tecnologias
 -Python
