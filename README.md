@@ -2,7 +2,7 @@
 Pipeline engenharia de dados desenvolvido com databricks, pyspark e delta lake  seguindo a arquitetura Medallion.
 
 #Arquitetura Medallion
-mermaid
+'''mermaid
 
 flowchart LR
 
@@ -13,6 +13,7 @@ flowchart LR
     C --> D[Gold<br/>Métricas e regras de negócio]
 
     D --> E[Análises e dashboards]
+    '''
 
 #Bronze
 -Ingestão dos dados da OLX.
