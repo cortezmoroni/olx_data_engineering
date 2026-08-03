@@ -10,7 +10,7 @@ Em projetos reais de dados, as informações  normalmente chegam incompletas, co
 Este projeto demonstra como organizar essas informações  em camadas,garantido maior  qualidade dos dados, melhor governança  e facilidade para consumo por ferramentas analíticas.
 Além disso, foi desenvolvido para práticar  conceitos utilizados no mercado, como Delta Lake, Databricks, Pyspark e a  Arquitetura Medallion
 
-# Aruquitetura Medallion
+# Arquitetura Medallion
 A arquitetura Medallion organiza os dados em três camadas:
 
 # Bronze
@@ -62,6 +62,6 @@ Arquivo CSV da OLX
 -Delta Lake
 -Github
 
-#Resultado Final 
+# Resultado Final 
 Ao final do pipeline é gerada uma tabela  Gold pronta para consumo analítico, contendo  dados tratados , padronizados e enriquecidos  para apoiar
 tomada de decisão.
