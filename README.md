@@ -36,11 +36,9 @@ Camada responsável pela qualidade dos dados.
 -Data processamento
 
 # Dicionário de Dados - Camada Gold
-
 Objetivo
 A camada Gold contém os dados refinados e enriquecidos da OLX, preparados para consumo analítico, dashboards e geração de indicadores. Nesta camada são criadas métricas derivadas para facilitar a análise dos imóveis.
 
-# Estrutura da Tabela 
 ## Estrutura da Tabela
 
 | Coluna | Tipo | Origem | Descrição |
