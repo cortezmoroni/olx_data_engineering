@@ -89,6 +89,7 @@ Arquivo CSV da OLX
 -Databricks
 -Delta Lake
 -Github
+-Git
 
 # Resultado Final 
 Ao final do pipeline é gerada uma tabela  Gold pronta para consumo analítico, contendo  dados tratados , padronizados e enriquecidos  para apoiar
