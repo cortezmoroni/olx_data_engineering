@@ -63,6 +63,15 @@ A camada Gold contém os dados refinados e enriquecidos da OLX, preparados para 
 | possui_garagem | STRING | Gold | Indica se o imóvel possui garagem. |
 | dt_carga | TIMESTAMP | Gold | Data e hora de processamento da tabela. |
 
+# Métricas criadas 
+A camada Gold adiciona métricas derivadas para facilitar análises:
+
+- *preco_m2:* preço dividido pela área do imóvel.
+- *categoria_preco:* classifica o imóvel em Baixo, Médio ou Alto.
+- *total_comodos:* soma dos quartos e banheiros.
+- *possui_garagem:* informa se o imóvel possui garagem.
+- *dt_carga:* registra a data e hora de processamento da tabela.
+
 # Fluxo do PIPELINE
 Arquivo CSV da OLX
         │
