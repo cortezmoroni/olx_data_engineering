@@ -35,6 +35,36 @@ Camada responsável pela qualidade dos dados.
 -Indicador de garagem
 -Data processamento
 
+# Dicionário de Dados - Camada Gold
+
+Objetivo
+A camada Gold contém os dados refinados e enriquecidos da OLX, preparados para consumo analítico, dashboards e geração de indicadores. Nesta camada são criadas métricas derivadas para facilitar a análise dos imóveis.
+
+# Estrutura da Tabela 
+## Estrutura da Tabela
+
+| Coluna | Tipo | Origem | Descrição |
+|---------|------|---------|-----------|
+| titulo | STRING | Silver | Título do anúncio do imóvel. |
+| url | STRING | Silver | Link original do anúncio da OLX. |
+| preco | DOUBLE | Silver | Valor anunciado do imóvel. |
+| tipo | STRING | Silver | Tipo do imóvel (Casa, Apartamento, Terreno etc.). |
+| bairro | STRING | Silver | Bairro do imóvel. |
+| cidade | STRING | Silver | Cidade onde o imóvel está localizado. |
+| estado | STRING | Silver | Unidade Federativa (UF). |
+| cep | STRING | Silver | CEP informado no anúncio. |
+| quartos | INT | Silver | Quantidade de quartos. |
+| banheiros | INT | Silver | Quantidade de banheiros. |
+| garagens | INT | Silver | Quantidade de vagas de garagem. |
+| area_m2 | DOUBLE | Silver | Área do imóvel em metros quadrados. |
+| descricao | STRING | Silver | Descrição completa do anúncio. |
+| imagens | STRING | Silver | URL da imagem principal do imóvel. |
+| preco_m2 | DOUBLE | Gold | Preço do metro quadrado (preço ÷ área). |
+| categoria_preco | STRING | Gold | Classificação do imóvel em baixo, médio ou alto. |
+| total_comodos | INT | Gold | Soma da quantidade de quartos e banheiros. |
+| possui_garagem | STRING | Gold | Indica se o imóvel possui garagem. |
+| dt_carga | TIMESTAMP | Gold | Data e hora de processamento da tabela. |
+
 # Fluxo do PIPELINE
 Arquivo CSV da OLX
         │
