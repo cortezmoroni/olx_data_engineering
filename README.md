@@ -72,6 +72,18 @@ A camada Gold adiciona métricas derivadas para facilitar análises:
 - *possui_garagem:* informa se o imóvel possui garagem.
 - *dt_carga:* registra a data e hora de processamento da tabela.
 
+  # Métricas calculadas na tabela Gold
+  Nesta camada são criadas métricas derivadas para facilitar análises dos imóveis e apoiar a construção de dashboards.
+
+| Coluna | Tipo | Regra de Negócio | Objetivo |
+|--------|------|------------------|----------|
+| preco_m2 | DOUBLE | preco / area_m2, quando area_m2 > 0 | Comparar imóveis pelo preço do metro quadrado. |
+| categoria_preco | STRING | Baixo (< R$ 300.000), Médio (R$ 300.000 a R$ 699.999) e Alto (≥ R$ 700.000) | Classificar os imóveis por faixa de preço. |
+| total_comodos | INT | Soma de quartos + banheiros | Facilitar análises sobre o tamanho do imóvel. |
+| possui_garagem | STRING | "Sim" quando garagens > 0; caso contrário, "Não" | Identificar rapidamente imóveis que possuem garagem. |
+| dt_carga | TIMESTAMP | Data e hora da execução do pipeline | Registrar quando os dados foram processados. |
+  
+
 # Fluxo do PIPELINE
 Arquivo CSV da OLX
         │
