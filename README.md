@@ -84,6 +84,25 @@ A camada Gold adiciona métricas derivadas para facilitar análises:
 | dt_carga | TIMESTAMP | Data e hora da execução do pipeline | Registrar quando os dados foram processados. |
   
 
+##  Data Quality
+
+Foram implementadas regras de qualidade de dados para garantir a confiabilidade da camada Gold antes da disponibilização para consumo analítico.
+
+### Regras implementadas
+
+-  DQ01 - Título obrigatório
+-  DQ02 - Preço maior que zero
+-  DQ03 - Área maior que zero quando informada
+-  DQ04 - URL sem duplicidade
+-  DQ05 - Categoria de preço válida
+-  DQ06 - Indicador de garagem válido
+-  DQ07 - Data de carga obrigatória
+
+### Resultado das validações
+
+![Relatório Data Quality](images/data_quality_report.png)
+
+
 # Fluxo do PIPELINE
 Arquivo CSV da OLX
         │
