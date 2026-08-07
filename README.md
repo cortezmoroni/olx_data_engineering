@@ -153,18 +153,18 @@ Data Quality
 -Git
 
 # Resultado Final 
-Ao final do pipeline, é gerada uma tabela Gold contendo dados tratados, padronizados e enriquecidos para consumo analítico.
+Ao final do pipeline, é gerada uma tabela Gold contendo dados tratados, padronizados e enriquecidos, prontos para consumo analítico.
 
-Além das transformações de negócio, foi implementada uma camada de Data Quality responsável por validar a qualidade dos dados antes da disponibilização da tabela final. As validações garantem maior confiabilidade das informações utilizadas em análises e dashboards.
+Além das transformações de negócio, foi implementada uma camada de Data Quality responsável por validar a qualidade e a consistência dos dados antes da disponibilização da tabela final, aumentando a confiabilidade das informações utilizadas em análises e dashboards.
 
 As principais validações realizadas incluem:
 
-- Verificação de título obrigatório.
-- Validação de preços maiores que zero.
-- Validação de área maior que zero quando informada.
-- Verificação de URLs duplicadas.
-- Validação da categoria de preço.
-- Validação do indicador de garagem.
-- Verificação da data de carga.
+* Verificação de títulos obrigatórios;
+* Validação de preços maiores que zero;
+* Validação de área maior que zero, quando informada;
+* Identificação de URLs duplicadas;
+* Validação da categoria de preço;
+* Validação do indicador de garagem;
+* Verificação da data de carga.
 
-Os resultados dessas validações são consolidados em um relatório de Data Quality, permitindo acompanhar a conformidade da tabela Gold e identificar possíveis inconsistências durante o processamento.
+Os resultados das validações são consolidados em um relatório de Data Quality, facilitando o acompanhamento da conformidade dos dados e a identificação de possíveis inconsistências durante o processamento.
