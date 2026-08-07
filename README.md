@@ -129,7 +129,7 @@ Análises e Dashboards
 
 # Orquestração do Pipeline com Databricks Jobs
 
-O pipeline foi orquestrado utilizando *Databricks Jobs*, permitindo a execução automatizada e sequencial das etapas da arquitetura Medallion.
+O pipeline foi orquestrado utilizando Databricks Jobs, permitindo a execução automatizada e sequencial das etapas da arquitetura Medallion, desde a ingestão dos dados brutos até as validações de Data Quality.
 
 # Fluxo de execução
 Bronze Ingestion
