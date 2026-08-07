@@ -6,7 +6,7 @@
 
 
 from pyspark.sql import functions as F
-from pyspark.sql.functions import col, when, coalesce, lit, round, current_timestamp
+
 
 
 #Extração dos dados  da Olx
