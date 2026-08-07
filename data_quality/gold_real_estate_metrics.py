@@ -152,7 +152,7 @@ df_relatorio_dq = spark.createDataFrame(
     schema=schema_dq
 )
 
-display(df_relatorio_dq.orderBy("id_regra"))
+
 
 
 
