@@ -125,6 +125,22 @@ Relatório de Data Quality
 Análises e Dashboards
 
 
+# Orquestração do Pipeline com Databricks Jobs
+
+O pipeline foi orquestrado utilizando *Databricks Jobs*, permitindo a execução automatizada e sequencial das etapas da arquitetura Medallion.
+
+# Fluxo de execução
+Bronze Ingestion
+       ↓
+Silver Ingestion
+       ↓
+Gold Ingestion
+       ↓
+Data Quality
+
+# Execução do pipeline
+
+![Databricks Workflow](images/jobs_olx.png)
 
 # Tecnologias
 -Python
