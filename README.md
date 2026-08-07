@@ -147,10 +147,12 @@ Data Quality
 # Tecnologias
 -Python
 -PySpark
+-Spark SQL
 -Databricks
 -Delta Lake
 -Github
 -Git
+-Databricks Jobs
 
 # Resultado Final 
 Ao final do pipeline, é gerada uma tabela Gold contendo dados tratados, padronizados e enriquecidos, prontos para consumo analítico.
