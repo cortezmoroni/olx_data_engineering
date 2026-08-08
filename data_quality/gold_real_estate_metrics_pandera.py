@@ -1,7 +1,9 @@
 
 #Instalação da biblioteca Pandera
 
-%pip install "pandera[pyspark]"
+%pip install --upgrade typing-extensions pandera[pyspark]
+
+dbutils.library.restartPython()
 
 import json
 import pandera.pyspark as pa
