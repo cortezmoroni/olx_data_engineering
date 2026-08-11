@@ -11,6 +11,12 @@ resources:
           notebook_task:
             notebook_path: /Workspace/Users/moronicortez@outlook.com/Drafts/Bronze_olx/bronze_olx
             source: WORKSPACE
+        - task_key: gold_ingestion_metrics
+          depends_on:
+            - task_key: data_quality
+          notebook_task:
+            notebook_path: /Workspace/Users/moronicortez@outlook.com/Drafts/Gold_olx/gold_real_estate_metrics
+            source: WORKSPACE
         - task_key: silver_ingestion
           depends_on:
             - task_key: bronze_ingestion
@@ -20,12 +26,6 @@ resources:
         - task_key: data_quality
           depends_on:
             - task_key: silver_ingestion
-          notebook_task:
-            notebook_path: /Workspace/Users/moronicortez@outlook.com/Drafts/Gold_olx/gold_real_estate_metrics
-            source: WORKSPACE
-        - task_key: gold_ingestion_metrics
-          depends_on:
-            - task_key: data_quality
           notebook_task:
             notebook_path: /Workspace/Users/moronicortez@outlook.com/Drafts/data_quality/gold_real_estate_metrics_pandera
             source: WORKSPACE
