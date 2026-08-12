@@ -12,7 +12,7 @@ Além disso, foi desenvolvido para práticar  conceitos utilizados no mercado, c
 
 # Arquitetura Medallion
 A arquitetura Medallion organiza os dados em três camadas:
-![Arquitetura do Pipeline](images/arquitetura_olx.jpeg)
+![Arquitetura do Pipeline](images/arquitetura_olx_real.jpeg)
 
 
 # Bronze
