@@ -154,6 +154,47 @@ Data Quality
 -Git
 -Databricks Jobs
 
+
+# Orquestração e Automação do Pipeline
+
+O pipeline foi configurado utilizando Databricks Jobs, permitindo a orquestração e execução automatizada das etapas da arquitetura Medallion.
+
+ # Fluxo de execução
+
+Bronze → Silver → Data Quality → Gold
+
+As tasks foram configuradas com dependências de execução, garantindo que cada etapa seja iniciada somente após a conclusão bem-sucedida da etapa anterior.
+
+Esse fluxo ajuda a evitar que dados não processados ou que não atendam aos critérios de qualidade avancem para a camada seguinte.
+
+ # Validação de Data Quality
+
+Após o processamento da camada Silver, os dados passam pela etapa de Data Quality, onde são aplicadas regras de validação antes da geração da camada Gold.
+
+As validações foram implementadas utilizando Pandera, permitindo verificar critérios de qualidade e identificar registros que não atendam às regras definidas.
+
+Caso uma validação considerada crítica falhe, a execução do pipeline pode ser interrompida, impedindo que dados inconsistentes avancem para a camada Gold.
+
+# Agendamento automático
+
+O Job possui um agendamento (Schedule) configurado no Databricks para executar o pipeline automaticamente todos os dias às 08:00.
+
+Com isso, o processamento não depende de execução manual dos notebooks, tornando o pipeline mais automatizado, reproduzível e confiável.
+
+# Monitoramento
+
+O Databricks Jobs permite acompanhar cada execução do pipeline, incluindo:
+
+* status das tasks;
+* tempo de execução;
+* dependências entre as etapas;
+* identificação de falhas;
+* histórico das execuções.
+
+ # Orquestração do job no Databricks
+![Databricks Workflow](images/data_quality_olx.png)
+
+
 # Resultado Final 
 Ao final do pipeline, é gerada uma tabela Gold contendo dados tratados, padronizados e enriquecidos, prontos para consumo analítico.
 
