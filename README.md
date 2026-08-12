@@ -87,8 +87,9 @@ A camada Gold adiciona métricas derivadas para facilitar análises:
   
 
 ##  Data Quality
-
 Foram implementadas regras de qualidade de dados para garantir a confiabilidade da camada Gold antes da disponibilização para consumo analítico.
+
+As validações foram posteriormente evoluídas com a utilização da biblioteca Pandera, permitindo estruturar e automatizar as regras de Data Quality dentro do pipeline.
 
 ### Regras implementadas
 
@@ -102,7 +103,26 @@ Foram implementadas regras de qualidade de dados para garantir a confiabilidade 
 
 ### Resultado das validações
 
+O processo gera um relatório contendo a regra validada, a coluna analisada, a quantidade de erros, o status da validação e a data/hora da execução.
+
 ![Relatório Data Quality](images/data_quality_report.png)
+
+# Data Quality com Pandera
+
+Como evolução do processo de qualidade de dados, foi implementada a biblioteca *Pandera* para estruturar e automatizar as validações realizadas sobre os dados da camada Gold.
+
+Com o Pandera, as regras de qualidade são definidas de forma estruturada, permitindo validar o schema e as regras de negócio antes da disponibilização dos dados para consumo analítico.
+
+As validações incluem:
+
+- Campos obrigatórios;
+- Tipos de dados;
+- Valores maiores que zero;
+- Valores permitidos;
+- Registros nulos ou inválidos;
+- Regras de negócio da camada Gold.
+
+Em caso de falha nas validações críticas, a execução do pipeline é interrompida, garantindo que apenas dados que atendam aos critérios de qualidade sejam disponibilizados para consumo analítico.
 
 
 # Fluxo do PIPELINE
