@@ -162,7 +162,7 @@ Data Quality
 
 # Execução do pipeline
 
-![Databricks Workflow](images/jobs_olx.png)
+![Databricks Workflow](images/data_quality_olx.png)
 
 # Tecnologias
 -Python
