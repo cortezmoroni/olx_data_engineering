@@ -196,18 +196,16 @@ O Databricks Jobs permite acompanhar cada execução do pipeline, incluindo:
 
 
 # Resultado Final 
-Ao final do pipeline, é gerada uma tabela Gold contendo dados tratados, padronizados e enriquecidos, prontos para consumo analítico.
+Ao final do projeto, foi desenvolvido um pipeline de Engenharia de Dados utilizando Databricks e PySpark, seguindo a arquitetura Medallion.
 
-Além das transformações de negócio, foi implementada uma camada de Data Quality responsável por validar a qualidade e a consistência dos dados antes da disponibilização da tabela final, aumentando a confiabilidade das informações utilizadas em análises e dashboards.
+O fluxo contempla:
 
-As principais validações realizadas incluem:
+* Bronze: ingestão e armazenamento dos dados brutos;
+* Silver: limpeza, padronização, tratamento de valores nulos e remoção de duplicidades;
+* Data Quality: aplicação de regras de qualidade utilizando Pandera, validando os dados antes de avançarem para a camada Gold;
+* Gold: disponibilização dos dados tratados e preparados para consumo analítico;
+* Orquestração: criação de um Databricks Job com dependências entre as tasks;
+* Automação: configuração de um agendamento (Schedule) para execução automática diária às 08:00;
+* Monitoramento: acompanhamento do status, tempo de execução e possíveis falhas das tasks pelo Databricks Jobs.
 
-* Verificação de títulos obrigatórios;
-* Validação de preços maiores que zero;
-* Validação de área maior que zero, quando informada;
-* Identificação de URLs duplicadas;
-* Validação da categoria de preço;
-* Validação do indicador de garagem;
-* Verificação da data de carga.
-
-Os resultados das validações são consolidados em um relatório de Data Quality, facilitando o acompanhamento da conformidade dos dados e a identificação de possíveis inconsistências durante o processamento.
+Com isso, o projeto evoluiu de um processamento manual para um pipeline automatizado, orquestrado e com controles de qualidade de dados, aproximando a solução de um cenário real de Engenharia de Dados.
